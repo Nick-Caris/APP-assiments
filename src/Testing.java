@@ -1,5 +1,7 @@
 import Sorting.Insertion;
 import Sorting.Merge;
+import Sorting.Quick;
+
 import java.util.Arrays;
 
 public class Testing {
@@ -17,6 +19,12 @@ public class Testing {
 
         Merge.sort(unsorted2);
         System.out.println("Sorted wth mergeSort: " + Arrays.toString(unsorted2));
+
+        Integer[] unsortedQuick = {1, 5, 3, 7, 9, 12, 14, 3};
+        System.out.println("unsorted array: " + Arrays.toString(unsortedQuick));
+
+        Quick.sort(unsortedQuick);
+        System.out.println("Sorted wth quicksort: " + Arrays.toString(unsortedQuick));
 
     }
 }

@@ -6,11 +6,11 @@ public class Quick implements Sort {
 
     public static <AnyType extends Comparable<? super AnyType>>
     void sort(AnyType[] a) {
-        quicksort(a, 0, a.length - 1);
+        quickSort(a, 0, a.length - 1);
     }
 
     private static <AnyType extends Comparable<? super AnyType>>
-    void quicksort(AnyType[] a, int low, int high) {
+    void quickSort(AnyType[] a, int low, int high) {
         if (low + CUTOFF > high)
             Insertion.sort(a);
         else {
@@ -37,8 +37,8 @@ public class Quick implements Sort {
             }
             Sort.swapReferences(a, i, high - 1);
 
-            quicksort(a, low, i - 1);
-            quicksort(a, i + 1, high);
+            quickSort(a, low, i - 1);
+            quickSort(a, i + 1, high);
         }
     }
 }
