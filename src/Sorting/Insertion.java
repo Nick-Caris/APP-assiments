@@ -1,12 +1,14 @@
 package Sorting;
 
-public class insertion {
+public class Insertion implements Sort {
+
+
     /**
      * Simple insertion sort
      */
     public static <AnyType extends Comparable<? super AnyType>>
-
-    AnyType[] insertionSort(AnyType[] a) {
+    void sort(AnyType[] a) {
+        System.out.println("Insertion");
         for (int p = 1; p < a.length; p++) {
             AnyType tmp = a[p];
             int j = p;
@@ -15,7 +17,5 @@ public class insertion {
                 a[j] = a[j - 1];
             a[j] = tmp;
         }
-
-        return a;
     }
 }
