@@ -23,4 +23,17 @@ public interface Sort {
         for (int i = 0; i < numElements; i++, rightEnd--)
             a[rightEnd] = tmpArray[rightEnd];
     }
+
+    /**
+     * Method to swap to elements in an array.
+     *
+     * @param a      an array of objects.
+     * @param index1 the index of the first object.
+     * @param index2 the index of the second object.
+     */
+    static void swapReferences(Object[] a, int index1, int index2) {
+        Object tmp = a[index1];
+        a[index1] = a[index2];
+        a[index2] = tmp;
+    }
 }
