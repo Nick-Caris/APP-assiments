@@ -6,6 +6,7 @@ public class Quick implements Sort {
 
     public static <AnyType extends Comparable<? super AnyType>>
     void sort(AnyType[] a) {
+        System.out.println("Quick");
         quickSort(a, 0, a.length - 1);
     }
 
